@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enernal Light Star 服务器</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> <!-- 一般手机适配网站图标 -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png"> <!-- -->
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png"> <!-- iPad适配网站图标 -->
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png"> <!-- IOS适配网站图标 -->
+    
+    <!-- Log -->
+    <link rel="stylesheet" href="css/about_web.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+    <!-- Slider -->
+    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--手机端-->
+    <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    [endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="startTime()">
+    <!-- Navigation 导航栏 -->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="page-scroll" href="#page-top">
+                    <img src="./svg/home_page.svg" style="padding-top: 10px;padding-left: 10px;">
+                </a>
+                <audio id="bg_music" src="./music/01.mp3" loop="loop" autoplay="autoplay"></audio>
+                <a class="page-scroll" >
+                    <img src="./svg/music_on.svg"  onclick="bg_music_on()" id="bg_music_on" style="padding-top: 10px;">
+                    <img src="./svg/music_off.svg"  onclick="bg_music_off()" id="bg_music_off" style="padding-top: 10px;">
+                </a>
+                <!--临时CSS-->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about" class="page-scroll">关于</a></li>
+                    <li><a href="#services" class="page-scroll">Q&A</a></li>
+                    <li><a href="#portfolio" class="page-scroll">服务器风景</a></li>
+                    <li><a href="#testimonials" class="page-scroll">团队介绍</a></li>
+                    <li><a href="./map/index.html" class="page-scroll">卫星地图</a></li>
+                    <li><a href="https://ks.wjx.top/vj/h48Fan6.aspx" target="_blank" class="page-scroll">入服申请</a></li>
+                    <li><a href="#contact" class="page-scroll">联系我们</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header 首页 -->
+    <header id="header">
+        <div class="intro">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="intro-text">
+                            <span>Welcome to</span>
+                            <h1>ELS</h1>
+                            <p>
+                                MC BE & JE Server<br>
+                                一款以建筑为载体、红石和特性相结合的原版生存服务器
+                            </p>
+                            <a href="https://qm.qq.com/cgi-bin/qm/qr?k=oU8fbhHsYXEkrG8m4L9Oa4ZSpqHk0ROQ&authKey=ajsqAGR8a+CKbO3BFW4BN4PAFHp05KupXzThlz9o+gX0lHq3jCSx/lQs33545P36&noverify=0 " target="_blank" class="btn btn-custom btn-lg page-scroll">
+                                加入我们
+                            </a>
+                            <a href="https://ks.wjx.top/vj/h48Fan6.aspx" target="_blank" class="btn btn-custom btn-lg page-scroll">
+                                入服申请
+                            </a>
+                            <a href="https://kook.top/5eJR42" target="_blank" class="btn btn-custom btn-lg page-scroll">
+                                一起开黑
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section 关于 -->
+    <div id="about">
+        <div class="container">
+            <div class="section-title text-center center">
+                <h2>关于</h2>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <img src="img/about.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="about-text">
+                        <h3>永恒星光的历史故事</h3>
+                        <p>ELS全名Enernal Light Star，中文名永恒星光，曾用名Everlight永恒之光。</p>
+                        <p>
+                            <ul>
+                                <li>服务器成立于2020年1月28日。创始人：</li>
+                                <li>1、ShiDai【腐竹 | 主要负责面板建设和服务器管理】</li>
+                                <li>2、zgp765【副腐竹 | 主要负责搭建服务器的硬件设施】。</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <ul>
+                                <li>它的前身是一个小众服务器【希望之光 | 腐竹lanfeng】中的最强公会【The Order And Stone】。取名为永恒星光其寓意有三个：</li>
+                                <li>1、希望服务器和Minecraft能够像宇宙中的星星一样闪闪发光。</li>
+                                <li>2、为了纪念【希望之光】服务器并且将【希望之光】服务器的薪火一直传承下去。</li>
+                                <li>3、莫得了别瞅了。</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>相关视频 | (一定要三连球球了)</strong>
+                        <ol>
+                            <li><a href="https://www.bilibili.com/video/BV1X7411T7TW"target="_blank">
+                                    1、Everlight#宣传 & 一周目完结
+                                </a>
+                            </li>
+                            <li><a href="https://www.bilibili.com/video/BV1ph411y7JJ"target="_blank">
+                                    2、一群肝帝和憨憨在服务器中生存了65639天会是什么样子？
+                                </a>
+                            </li>
+                            <li><a href="https://www.bilibili.com/video/BV1Qv411a7qL"target="_blank">
+                                    3、《论腐竹在服务器中的地位》& 2021除夕特辑
+                                </a>
+                            </li>
+                            <li><a href="https://www.bilibili.com/video/BV1C341117y4"target="_blank">
+                                    4、我是星辰，从苍穹坠落在绿茵中! | ELS服务器二周年预告片
+                                </a>
+                            </li>
+                            <li><a href="https://www.bilibili.com/video/BV1Ym4y1f79q"target="_blank">
+                                    5、方块人也有自己的梦想！| ELS服务器二周年纪念视频
+                                </a>
+                            </li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section FAQ -->
+    <div id="services" class="text-center">
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1 section-title">
+                <h2>Q&A</h2>
+                <hr>
+                <p>或许你对我们的服务器充满了疑惑，看看以下的问题是否能帮助到你们</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-md-3">
+                    <i class="fa fa-bullhorn"></i>
+                    <h4>ELS的宗旨</h4>
+                    <p>ELS遵循原版规则，使用游戏中存在的机制和特性来获取资源和建设。</p>
+                    <p>服内实行一定程度的共产制度，公共资源共享、自家资源私有。</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <i class="fa fa-magic"></i>
+                    <h4>服务器中有插件吗</h4>
+                    <p>服务器会在不破坏游戏平衡的条件下，适当的增加些趣味性或者辅助性插件。</p>
+                    <p>在2022.6.6会正式开放JE服，考虑到BE玩家的游戏体验，服务器会采用[间歇泉]技术，玩家可以通过BE端或者Boat端进入服务器</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <i class="fa fa-comments-o"></i>
+                    <h4>我能否赞助你们</h4>
+                    <p><a href="https://afdian.net/@elsfamily" target="_blank">爱发电主页</a></p>
+                    <p>不妨各位金主爸爸们高抬贵手</p>
+                    <p>你们的支持和赞助是服务器运营的最大动力。</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <i class="fa fa-group"></i>
+                    <h4>想加入ELS</h4>
+                    <p><a href="https://ks.wjx.top/vj/h48Fan6.aspx" target="_blank">入服申请</a></p>
+                    <p>目前ELS实行白名单审核制，接受所有MC[BE]&[JE]玩家申请，在2022年6月后会扩大至整个MC圈。</p>
+                    <p>填写入服申请后，会在7个工作日之内将结果以邮件的方式发送至你的邮箱。</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <i class="fa fa-server"></i>
+                    <h4>备份机制</h4>
+                    <p>服务器内置了热备份插件，会定时将服务器进行备份保存，防止服务器存档损坏。</p>
+                    <p>此外，服务器会将备份的存档上传至本地云盘<a href="http://cloud.elsteam.xyz" target="_blank">[永恒云盘]</a>存储、异地存储及上云等多项存储方案，防止备份文件损坏。</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <i class="fa fa-code"></i>
+                    <h4>JE客户端不会用怎么办</h4>
+                    <p></p>
+                    <p>我们有专门的<a href="http://doc.elsteam.xyz" target="_blank">使用文档</a>（保姆级教程）来教你如何从下载到游玩</p>
+                    <p>其中还包括了服务器各种指令集，such as：Carpet、MCDR</p>
+                    <p>如果对我们的客户端不满意的话，你还可以参考文档中给出的模组自定义客户端</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <i class="fa fa-send"></i>
+                    <h4>一起开黑</h4>
+                    <p>话不多说放链接</p>
+                    <p><a href="https://kook.top/5eJR42" target="_blank">[KOOK]</a></p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <i class="fa fa-plug"></i>
+                    <h4>其他的有意思的功能</h4>
+                    <p><a href="http://video.elsteam.xyz" target="_blank">ELS电影网-Video</a></p>
+                    <p><a href="http://cloud.elsteam.xyz" target="_blank">永恒云盘-Cloud</a></p>
+                    <p><a href="http://bbs.elsteam.xyz">星光论坛-BBS</a></p>
+                    <p><a href="http://blog.elsteam.xyz">海洋の记忆-博客</a></p>
+                    <p><a href="http://timemail.elsteam.xyz">时光邮局-写给未来的一封信</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section 服务器风景 -->
+    <div id="portfolio">
+        <div class="container">
+            <div class="section-title text-center center">
+                <h2>服务器风景图</h2>
+                <hr>
+                <p>运用Chunky以及PCL启动器结合Iris光影框架渲染生成</p>
+                <p>图片仅供参考</p>
+            </div>
+            <div class="categories">
+                <ul class="cat">
+                    <li>
+                        <ol class="type">
+                            <li><a href="#" data-filter="*" class="active">全部</a></li>
+                            <li><a href="#" data-filter=".lorem">主世界</a></li>
+                            <li><a href="#" data-filter=".dolor">下界</a></li>
+                            <li><a href="#" data-filter=".adipiscing">末地</a></li>
+                        </ol>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="row">
+                <div class="portfolio-items">
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/World-large.jpg" title="主世界俯视图" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>主世界俯视图</h4>
+                                    </div>
+                                    <img src="img/landscape/World-small.jpg" class="img-responsive" alt="主世界俯视图">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 dolor">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/Nether-large.jpg" title="下界俯视图" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>下界俯视图</h4>
+                                    </div>
+                                    <img src="img/landscape/Nether-small.jpg" class="img-responsive" alt="下界俯视图">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 adipiscing">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/End-large.jpg" title="末地俯视图" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>末地俯视图</h4>
+                                    </div>
+                                    <img src="img/landscape/End-small.jpg" class="img-responsive" alt="末地俯视图">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[World]Starlight_City-morning-large.jpg" title="星光城" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>星光城</h4>
+                                    </div>
+                                    <img src="img/landscape/[World]Starlight_City-morning-small.jpg" class="img-responsive" alt="星光城">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[World]The_Forbidden_City-morning-large.jpg" title="紫禁城" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>紫禁城</h4>
+                                    </div>
+                                    <img src="img/landscape/[World]The_Forbidden_City-morning-small.jpg" class="img-responsive" alt="紫禁城">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[World]Yuan_Town-dusk-large.jpg" title="圆镇" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>圆镇</h4>
+                                    </div>
+                                    <img src="img/landscape/[World]Yuan_Town-dusk-small.jpg" class="img-responsive" alt="圆镇">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[World]Moon_Palace-dusk-large.jpg" title="月宫" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>月宫</h4>
+                                    </div>
+                                    <img src="img/landscape/[World]Moon_Palace-dusk-small.jpg" class="img-responsive" alt="月宫">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[World]Liexiong_landing_ship-dusk-large.jpg" title="猎雄级登陆舰" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>猎雄级登陆舰</h4>
+                                    </div>
+                                    <img src="img/landscape/[World]Liexiong_landing_ship-dusk-small.jpg" class="img-responsive" alt="猎雄级登陆舰">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[World]Eiffel_tower-night-large.jpg" title="巴黎铁塔" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>巴黎铁塔</h4>
+                                    </div>
+                                    <img src="img/landscape/[World]Eiffel_tower-night-small.jpg" class="img-responsive" alt="巴黎铁塔">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 dolor">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[Nether]Hell_Hall-large.jpg" title="地狱大厅" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>地狱大厅</h4>
+                                    </div>
+                                    <img src="img/landscape/[Nether]Hell_Hall-small.jpg" class="img-responsive" alt="地狱大厅">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 dolor">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[Nether]Hell_traffic_line1-large.jpg" title="地狱交通1号线" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>地狱交通1号线</h4>
+                                    </div>
+                                    <img src="img/landscape/[Nether]Hell_traffic_line1-small.jpg" class="img-responsive" alt="地狱交通1号线">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 dolor">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[Nether]Hell_traffic_line2-large.jpg" title="地狱交通2号线" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>地狱交通2号线</h4>
+                                    </div>
+                                    <img src="img/landscape/[Nether]Hell_traffic_line2-small.jpg" class="img-responsive" alt="地狱交通2号线">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 adipiscing">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[End]Folding_door_decoration-large.jpg" title="折跃门装饰" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>折跃门装饰</h4>
+                                    </div>
+                                    <img src="img/landscape/[End]Folding_door_decoration-small.jpg" class="img-responsive" alt="折跃门装饰">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[World]Heart_of_the_sea-morning-large.jpg" title="海洋之心&守卫者农场" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>海洋之心&守卫者农场</h4>
+                                    </div>
+                                    <img src="img/landscape/[World]Heart_of_the_sea-morning-small.jpg" class="img-responsive" alt="海洋之心&守卫者农场">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[World]Full_item_sorting_station-night-large.jpg" title="全物品分类站" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>全物品分类站</h4>
+                                    </div>
+                                    <img src="img/landscape/[World]Full_item_sorting_station-night-small.jpg" class="img-responsive" alt="全物品分类站">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[World]Main_world_pig_tower-night-large.jpg" title="主世界猪人塔" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>主世界猪人塔</h4>
+                                    </div>
+                                    <img src="img/landscape/[World]Main_world_pig_tower-night-small.jpg" class="img-responsive" alt="主世界猪人塔">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 dolor">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[Nether]Guardian_farm_collection_device-large.jpg" title="守卫者农场收集装置" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>守卫者农场收集装置</h4>
+                                    </div>
+                                    <img src="img/landscape/[Nether]Guardian_farm_collection_device-small.jpg" class="img-responsive" alt="守卫者农场收集装置">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 adipiscing">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[End]320_times_speed_furnace_group-large.jpg" title="320倍速熔炉组" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>320倍速熔炉组</h4>
+                                    </div>
+                                    <img src="img/landscape/[End]320_times_speed_furnace_group-small.jpg" class="img-responsive" alt="320倍速熔炉组">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 col-lg-3 adipiscing">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/landscape/[End]Shuchang_special_zone-large.jpg" title="树场特区" data-lightbox-gallery="gallery1">
+                                    <div class="hover-text">
+                                        <h4>树场特区</h4>
+                                    </div>
+                                    <img src="img/landscape/[End]Shuchang_special_zone-small.jpg" class="img-responsive" alt="树场特区">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Achievements Section  -->
+    <div id="achievements" class="text-center">
+        <div class="overlay">
+            <div class="container">
+                <div class="section-title center">
+                    <h2>服务器成立已经</h2>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="achievement-box">
+                            <span class="count" id="nowDate_day">99</span>
+                            <h4>天</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="achievement-box">
+                            <span class="count" id="nowDate_hour">99</span>
+                            <h4>时</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="achievement-box">
+                            <span class="count" id="nowDate_minute">99</span>
+                            <h4>分</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="achievement-box">
+                            <span class="count" id="nowDate_second">99</span>
+                            <h4>秒</h4>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>服务器<span class="count" id="anniversary">99</span>周年</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section 团队介绍 -->
+    <div id="testimonials" class="text-center">
+        <div class="container">
+            <div class="section-title">
+                <h2>团队介绍</h2>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div id="testimonial" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="img/clients/Shi Dai.jpg" alt="Shi Dai" />
+                            <h3><strong><a href="https://space.bilibili.com/105143991" target="_blank">ShiDai</a></strong></h3>
+                            <p>ELS服务器创始人</p>
+                            <p>主要负责服务器的软件制作整合开发，拥有后台管理权限。</p>
+                            <p>代表作：全物品分类站、海洋之心、各式各样的别墅</p>
+                        </div>
+
+                        <div class="item">
+                            <img src="img/clients/zgp765.jpg" alt="zgp765" />
+                            <h3><strong><a href="https://space.bilibili.com/299625888/" target="_blank">zgp765</a></strong></h3>
+                            <p>ELS服务器创始人</p>
+                            <p>主要负责服务器硬件支持和云服务，同样也拥有后台管理权限。</p>
+                            <p>代表作：主城的一小片农场</p>
+                        </div>
+
+                        <div class="item">
+                            <img src="img/clients/lzdadou.jpg" alt="lzdadou" />
+                            <h3><strong><a href="https://space.bilibili.com/506406176/" target="_blank">lzdadou</a></strong></h3>
+                            <p>星光城基建负责人</p>
+                            <p>承担了服务器大部分基建，名副其实的肝帝，并开发了全网首发的新版光速船。</p>
+                            <p>代表作：星光城、地狱大厅</p>
+                        </div>
+
+                        <div class="item">
+                            <img src="img/clients/LivelongCrown71.jpg" alt="LivelongCrown71" />
+                            <h3><strong><a href="https://space.bilibili.com/297500399/" target="_blank">LivelongCrown71</a></strong></h3>
+                            <p>红石工程师</p>
+                            <p>与腐竹共同承担了服务器的后勤工程，独自开发了末地。</p>
+                            <p>代表作：第三代全树种农场、四联苦力怕农场以及正在开发的村民交易场所</p>
+                        </div>
+
+                        <div class="item">
+                            <img src="img/clients/AdjacentAlloy59.jpg" alt="AdjacentAlloy59" />
+                            <h3><strong><a href="https://space.bilibili.com/70319531/" target="_blank">AdjacentAlloy59</a></strong></h3>
+                            <p>ELS吉祥物</p>
+                            <p>作为开荒玩家之一，是服务器首席吉祥物？主要负责活跃气氛？？平日里习惯在服务器佛系摸鱼？？？</p>
+                            <p>代表作：星光城内一座日式建筑</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/clients/zhr13006.jpg" alt="zhr13006" />
+                            <h3><strong><a href="#" target="_blank">zhr13006</a></strong></h3>
+                            <p>称号暂无</p>
+                            <p>服务器最忠实的摸鱼玩家</p>
+                            <p>代表作：星光城北方山上的小别墅</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/clients/xiao_yuan.jpg" alt="xiao_yuan" />
+                            <h3><strong><a href="#" target="_blank">xiao_yuan</a></strong></h3>
+                            <p>圆镇工程师</p>
+                            <p>简介暂无</p>
+                            <p>代表作：圆镇</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/clients/game_ID.jpg" alt="游戏ID" />
+                            <h3><strong><a href="#" target="_blank">游戏ID</a></strong></h3>
+                            <p>称号暂无</p>
+                            <p>简介暂无</p>
+                            <p>代表作：暂无</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section 联系我们 -->
+    <div id="contact" class="text-center">
+        <div class="container">
+            <div class="section-title center">
+                <h2>联系我们</h2>
+                <hr>
+                <p>你们的建议、支持和赞助是服务器运营的最大动力，欢迎各位加入ELS这个大家庭！</p>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <p>维护中......暂时无法使用</p>
+                    <p>或许你可以通过服务器<a href="https://ks.wjx.top/vj/h48Fan6.aspx" target="_blank">入服申请</a>来加入我们哦！</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" id="name" class="form-control" placeholder="请输入您的名字/Xbox游戏ID" required="required">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" id="email" class="form-control" placeholder="请输入您的电子邮件" required="required">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="请输入内容" required="required"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div id="success"></div>
+                    <button type="submit" class="btn btn-custom btn-lg">发送</button>
+                </form>
+                <div class="social">
+                    <ul>
+                        <li>
+                            <a href="https://space.bilibili.com/105143991"  target="_blank">
+                                <img src="./svg/bilibili.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://qm.qq.com/cgi-bin/qm/qr?k=oU8fbhHsYXEkrG8m4L9Oa4ZSpqHk0ROQ&authKey=ajsqAGR8a+CKbO3BFW4BN4PAFHp05KupXzThlz9o+gX0lHq3jCSx/lQs33545P36&noverify=0" target="_blank">
+                                <img src="./svg/qq.svg">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Section 末尾 -->
+    <footer id="footer">
+        <div class="container text-center">
+            <p>
+                Copyright &copy;2022 
+                <a href="#">ELS | </a>
+                <a target="_blank" href="https://space.bilibili.com/105143991">By ShiDai_十代 | </a>
+                <a class="links" href="#page-top" onclick="showAbout()">关于Web</a>
+            </p>
+            <!--Web Log-->
+            <div class="cover1" id="cover1">
+                <div class="popUp" id="popAbout">
+                    <span class="btnClose" onclick="closePop(popAbout)">
+                        <span class="btnCloseInner"></span>
+                    </span>
+                    <div class="aboutLogo"></div>
+                    <div class="pContent centerAligned">
+                        <p id="pVersion">version</p>
+                        <p class="pAbout">
+                            这里是的ELS官网(〃'▽'〃)<br>
+                            本网站由
+                            <a class="links1" href="https://space.bilibili.com/105143991" target="_blank">
+                                ShiDai
+                            </a>
+                            通过参考模板以及借用
+                            <a class="links2" href="https://limestart.cn" target="_blank">
+                                青柠起始页
+                            </a>
+                            部分源代码制作而成<br>
+                            如果你喜欢这个服务器，可以
+                            <a onclick="closePop(popAbout); setTimeout(() => showPop(popDonate), 400)" class="links1" href="https://ks.wjx.top/vj/h48Fan6.aspx">
+                                加入我们
+                            </a>
+                            。Have a nice day!<br>
+                            项目地址: www.elsteam.xyz<br>
+                        </p>
+                        <div id="changeLog"></div>
+                    </div>
+                </div>
+            </div>
+
+            <p>我们不隶属于<a target="_blank" href="https://www.minecraft.net">Mojang AB | </a>
+                <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2022008300号</a>
+            </p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <script type="text/javascript" src="js/jquery.counterup.js"></script>
+    <script type="text/javascript" src="js/waypoints.js"></script>
+    <script type="text/javascript" src="js/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+
+
+    <script type="text/javascript" src="js/about_web.js"></script>
+    
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript" src="js/time.js"></script>
+    <script type="text/javascript" src="js/music.js"></script>
+    <script type="text/javascript" src="js/contact_me.js"></script>
+
+
+
+
+</body>
+
+</html>
