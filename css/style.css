@@ -418,7 +418,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99c54daa', e
 #testimonial img {
 	width: 140px;
 	height: 140px;
-	border-radius: 50%;
+	border-radius: 20%;
 }
 #testimonial .item p {
 	margin: 30px 0;
